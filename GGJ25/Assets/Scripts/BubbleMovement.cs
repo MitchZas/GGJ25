@@ -9,6 +9,7 @@ public class BubbleMovement : MonoBehaviour
 
     public ClamMovement clamMovementScript;
     public BubbleMovement bubbleMovementScript;
+    //public Rigidbody2D clamRB;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -45,11 +46,17 @@ public class BubbleMovement : MonoBehaviour
             Destroy(gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
         if (other.gameObject.tag == "Clam")
         {
-            bubbleMovementScript.enabled = false;
+            Debug.Log("Collision Detected");
+            Destroy(gameObject);
             clamMovementScript.enabled = true;
+            bubbleMovementScript.enabled = false;
+            //clamRB.gravityScale = 4f;
         }
     }
 }

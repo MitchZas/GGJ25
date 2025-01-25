@@ -592,7 +592,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 4
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -638,7 +638,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.021325648, y: -0.042651296}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -648,7 +648,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.4407318, y: 1.6255548}
   m_EdgeRadius: 0
 --- !u!114 &1202300499
 MonoBehaviour:
@@ -662,6 +662,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ac15ed377440f489d01514f001623b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 1202300497}
+  upStrength: 5
+  horizontalStrength: 3
+  bubbleMovementScript: {fileID: 1555428412}
+  clamMovementScript: {fileID: 1202300499}
 --- !u!1 &1555428407
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +836,8 @@ MonoBehaviour:
   downStrength: 5
   horizontalStrength: 3
   clamMovementScript: {fileID: 1202300499}
+  bubbleMovementScript: {fileID: 1555428412}
+  clamRB: {fileID: 1202300497}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
