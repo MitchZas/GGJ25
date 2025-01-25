@@ -1,14 +1,17 @@
 using UnityEngine;
 
-public class BubbleMovement : MonoBehaviour
+public class ClamMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public float downStrength = 5f;
-    public float horizontalStrength = 5f;
+    public float upStrength = 5f;
+    public float horizontalStrength = 3f;
 
+    public BubbleMovement bubbleMovementScript;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        bubbleMovementScript.enabled = false;
         GetComponent<Rigidbody2D>();
     }
 
@@ -17,7 +20,7 @@ public class BubbleMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.linearVelocity = Vector2.down * downStrength; 
+            rb.linearVelocity = Vector2.up * upStrength;
         }
 
         if (Input.GetKeyDown(KeyCode.A))
