@@ -309,6 +309,11 @@ Transform:
   - {fileID: 891982534}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &478446871 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7401180490114937441, guid: 178a6752a5775e14eb7d1b36244e0030, type: 3}
+  m_PrefabInstance: {fileID: 5903329866394822139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +901,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1670398375}
     m_Modifications:
     - target: {fileID: 2356782480202415696, guid: 178a6752a5775e14eb7d1b36244e0030, type: 3}
       propertyPath: m_Name
@@ -916,7 +921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7401180490114937441, guid: 178a6752a5775e14eb7d1b36244e0030, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.62438476
+      value: -0.6243848
       objectReference: {fileID: 0}
     - target: {fileID: 7401180490114937441, guid: 178a6752a5775e14eb7d1b36244e0030, type: 3}
       propertyPath: m_LocalRotation.x
@@ -928,7 +933,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7401180490114937441, guid: 178a6752a5775e14eb7d1b36244e0030, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7811169
+      value: -0.78111696
       objectReference: {fileID: 0}
     - target: {fileID: 7401180490114937441, guid: 178a6752a5775e14eb7d1b36244e0030, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1850,6 +1855,40 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.105142206, y: 0}
   m_Radius: 13.262432
+--- !u!1 &1670398374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1670398375}
+  m_Layer: 0
+  m_Name: 'Obstacles '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1670398375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670398374}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 478446871}
+  - {fileID: 1760640816}
+  - {fileID: 1870775981}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1686718470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,13 +1920,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1760640816 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7401180490114937441, guid: 178a6752a5775e14eb7d1b36244e0030, type: 3}
+  m_PrefabInstance: {fileID: 1877155116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1870775981 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7401180490114937441, guid: 178a6752a5775e14eb7d1b36244e0030, type: 3}
+  m_PrefabInstance: {fileID: 911165205}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1877155116
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1670398375}
     m_Modifications:
     - target: {fileID: 2356782480202415696, guid: 178a6752a5775e14eb7d1b36244e0030, type: 3}
       propertyPath: m_Name
@@ -2385,7 +2434,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1670398375}
     m_Modifications:
     - target: {fileID: 2356782480202415696, guid: 178a6752a5775e14eb7d1b36244e0030, type: 3}
       propertyPath: m_Name
@@ -2450,9 +2499,7 @@ SceneRoots:
   - {fileID: 1202300496}
   - {fileID: 1555428409}
   - {fileID: 928751117}
-  - {fileID: 5903329866394822139}
-  - {fileID: 1877155116}
-  - {fileID: 911165205}
+  - {fileID: 1670398375}
   - {fileID: 960795265}
   - {fileID: 1507855650}
   - {fileID: 833225636}
