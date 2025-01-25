@@ -16,6 +16,9 @@ public class BubbleMovement : MonoBehaviour
     public CinemachineCamera cam;
     public Transform clamTarget;
 
+    //[SerializeField] AudioSource bubblePopAudio;
+    [SerializeField] AudioClip bubblePop;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -56,7 +59,7 @@ public class BubbleMovement : MonoBehaviour
         if (other.gameObject.tag == "Pop")
         {
             // Add in a "pop" animation
-            Object.FindFirstObjectByType<AudioManager>().Play("BubblePop");
+            AudioSource.PlayClipAtPoint(bubblePop,transform.position);
             Destroy(gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ocean floor_0: -3109713021823182746
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
