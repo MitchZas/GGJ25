@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +10,9 @@ public class BubbleMovement : MonoBehaviour
 
     public ClamMovement clamMovementScript;
     public BubbleMovement bubbleMovementScript;
-    //public Rigidbody2D clamRB;
+
+    public CinemachineCamera cam;
+    public Transform clamTarget;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -56,7 +59,7 @@ public class BubbleMovement : MonoBehaviour
             Destroy(gameObject);
             clamMovementScript.enabled = true;
             bubbleMovementScript.enabled = false;
-            //clamRB.gravityScale = 4f;
+            cam.Follow = clamTarget;
         }
     }
 }
