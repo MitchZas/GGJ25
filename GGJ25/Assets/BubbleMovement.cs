@@ -18,5 +18,10 @@ public class BubbleMovement : MonoBehaviour
         {
             rb.linearVelocity = Vector2.down * downStrength; 
         }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+
+        }
     }
 }
