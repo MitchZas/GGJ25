@@ -1,6 +1,7 @@
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class BubbleMovement : MonoBehaviour
 {
@@ -40,12 +41,6 @@ public class BubbleMovement : MonoBehaviour
             rb.linearVelocity = Vector2.right * horizontalStrength;
         }
     }
-
-    private void CollisionEnter2D(Collider2D other)
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Clam")
@@ -60,6 +55,7 @@ public class BubbleMovement : MonoBehaviour
         if (other.gameObject.tag == "Pop")
         {
             // Add in a "pop" animation
+            Object.FindFirstObjectByType<AudioManager>().Play("BubblePop");
             Destroy(gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
