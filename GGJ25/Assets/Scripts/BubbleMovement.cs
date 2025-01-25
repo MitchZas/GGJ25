@@ -8,6 +8,7 @@ public class BubbleMovement : MonoBehaviour
     public Rigidbody2D rb;
     public float downStrength = 5f;
     public float horizontalStrength = 5f;
+    
 
     public ClamMovement clamMovementScript;
     public BubbleMovement bubbleMovementScript;

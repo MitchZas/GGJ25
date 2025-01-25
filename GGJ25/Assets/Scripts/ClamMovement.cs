@@ -7,6 +7,7 @@ public class ClamMovement : MonoBehaviour
     public Rigidbody2D rb;
     public float upStrength = 20f;
     public float horizontalStrength = 3f;
+    public SpriteRenderer clamSprite;
 
     public BubbleMovement bubbleMovementScript;
     public ClamMovement clamMovementScript;
@@ -34,11 +35,13 @@ public class ClamMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             rb.linearVelocity = Vector2.left * horizontalStrength;
+            clamSprite.flipX = true;
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
             rb.linearVelocity = Vector2.right * horizontalStrength;
+            clamSprite.flipX = false;
         }
     }
        private void OnCollisionEnter2D(Collision2D other)
