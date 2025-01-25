@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ClamMovement : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class ClamMovement : MonoBehaviour
     {
         if (clamMovementScript.enabled == true)
         {
-            rb.gravityScale = 2f;
+            rb.gravityScale = 3f;
         }
         
         if (Input.GetKeyDown(KeyCode.Space))
@@ -39,4 +40,13 @@ public class ClamMovement : MonoBehaviour
             rb.linearVelocity = Vector2.right * horizontalStrength;
         }
     }
+       private void OnCollisionEnter2D(Collision2D other)
+        {
+            if (other.gameObject.tag == "Pop" && other.gameObject.layer == 6)
+            {
+            // Add in a "pop" animation
+                Destroy(gameObject);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
 }

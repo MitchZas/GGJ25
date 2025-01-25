@@ -41,14 +41,9 @@ public class BubbleMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void CollisionEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Pop")
-        {
-            // Add in a "pop" animation
-            Destroy(gameObject);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -60,6 +55,13 @@ public class BubbleMovement : MonoBehaviour
             clamMovementScript.enabled = true;
             bubbleMovementScript.enabled = false;
             cam.Follow = clamTarget;
+        }
+
+        if (other.gameObject.tag == "Pop")
+        {
+            // Add in a "pop" animation
+            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

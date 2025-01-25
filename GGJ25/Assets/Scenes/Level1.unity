@@ -283,9 +283,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3627855495130922728, guid: c4f5409fd4af7c944898517887775f0c, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0361452
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627855495130922728, guid: c4f5409fd4af7c944898517887775f0c, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.018072635
+      objectReference: {fileID: 0}
     - target: {fileID: 4299609246958311956, guid: c4f5409fd4af7c944898517887775f0c, type: 3}
       propertyPath: m_Name
       value: Wall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299609246958311956, guid: c4f5409fd4af7c944898517887775f0c, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -378,7 +390,7 @@ GameObject:
   - component: {fileID: 478446871}
   - component: {fileID: 478446870}
   - component: {fileID: 478446872}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Triangle
   m_TagString: Pop
   m_Icon: {fileID: 0}
@@ -485,11 +497,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.008760691, y: 0.09306517}
+  m_Offset: {x: -0.009680033, y: 0.09921199}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.28866667}
@@ -499,7 +511,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.439322, y: 0.7634637}
+  m_Size: {x: 1.2384095, y: 1.2675034}
   m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
@@ -1116,7 +1128,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1202300498
 BoxCollider2D:
   m_ObjectHideFlags: 0
