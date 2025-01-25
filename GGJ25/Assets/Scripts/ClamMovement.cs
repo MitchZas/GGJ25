@@ -7,7 +7,7 @@ public class ClamMovement : MonoBehaviour
     public Rigidbody2D rb;
     public float upStrength = 20f;
     public float horizontalStrength = 3f;
-    private SpriteRenderer clamSprite;
+    public SpriteRenderer clamSprite;
 
     public BubbleMovement bubbleMovementScript;
     public ClamMovement clamMovementScript;
