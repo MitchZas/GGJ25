@@ -3041,6 +3041,7 @@ MonoBehaviour:
   clamMovementScript: {fileID: 1202300499}
   bubbleMovementScript: {fileID: 1555428412}
   pearl: {fileID: 532082403}
+  bubbleRenderer: {fileID: 1555428408}
   cam: {fileID: 284410234}
   clamTarget: {fileID: 1202300496}
   mergeText: {fileID: 1632543995}

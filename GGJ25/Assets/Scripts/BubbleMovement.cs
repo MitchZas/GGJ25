@@ -12,12 +12,12 @@ public class BubbleMovement : MonoBehaviour
     public Rigidbody2D rb;
     public float downStrength = 5f;
     public float horizontalStrength = 5f;
-    
-
+   
     public ClamMovement clamMovementScript;
     public BubbleMovement bubbleMovementScript;
 
     public GameObject pearl;
+    public SpriteRenderer bubbleRenderer;
 
     public CinemachineCamera cam;
     public Transform clamTarget;
@@ -76,16 +76,14 @@ public class BubbleMovement : MonoBehaviour
 
         if (other.gameObject.tag == "Pop")
         {
-            // Add in a "pop" animation
+            bubbleRenderer.enabled = false;
             StartCoroutine(BubblePop());
-            
         }
     }
 
     IEnumerator BubblePop()
     {
-        Destroy(gameObject);
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        yield return new WaitForSeconds(.5f);
+        SceneManager.LoadScene("Level1");
     }
 }
