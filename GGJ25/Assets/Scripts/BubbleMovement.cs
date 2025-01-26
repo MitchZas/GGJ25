@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
+using static System.TimeZoneInfo;
 
 public class BubbleMovement : MonoBehaviour
 {
@@ -54,6 +56,7 @@ public class BubbleMovement : MonoBehaviour
             rb.linearVelocity = Vector2.right * horizontalStrength;
         }
     }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Clam")
@@ -74,8 +77,15 @@ public class BubbleMovement : MonoBehaviour
         if (other.gameObject.tag == "Pop")
         {
             // Add in a "pop" animation
-            Destroy(gameObject);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            StartCoroutine(BubblePop());
+            
         }
+    }
+
+    IEnumerator BubblePop()
+    {
+        Destroy(gameObject);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
