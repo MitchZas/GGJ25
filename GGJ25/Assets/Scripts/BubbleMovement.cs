@@ -15,6 +15,8 @@ public class BubbleMovement : MonoBehaviour
     public ClamMovement clamMovementScript;
     public BubbleMovement bubbleMovementScript;
 
+    public GameObject pearl;
+
     public CinemachineCamera cam;
     public Transform clamTarget;
 
@@ -66,6 +68,7 @@ public class BubbleMovement : MonoBehaviour
             swimDownText.enabled = false;
             arrowText.enabled = true;
             LeftRightText.enabled = false;
+            pearl.SetActive(true);
         }
 
         if (other.gameObject.tag == "Pop")

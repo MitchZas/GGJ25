@@ -943,7 +943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &532082404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -957,6 +957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoaderScript: {fileID: 8898472553173200919}
+  pearl: {fileID: 532082403}
 --- !u!58 &532082405
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2659,7 +2660,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Swim up to the top!
+  m_text: Find the Pearl!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3d8e9068e2dedf429c8f224cea1b815, type: 2}
   m_sharedMaterial: {fileID: 1116754967828115329, guid: a3d8e9068e2dedf429c8f224cea1b815, type: 2}
@@ -3037,6 +3038,7 @@ MonoBehaviour:
   horizontalStrength: 3
   clamMovementScript: {fileID: 1202300499}
   bubbleMovementScript: {fileID: 1555428412}
+  pearl: {fileID: 532082403}
   cam: {fileID: 284410234}
   clamTarget: {fileID: 1202300496}
   mergeText: {fileID: 1632543995}
@@ -3718,7 +3720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4721686160686032853, guid: 05ee3fc4cf79c5046b1a966403c84a38, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8806669750425780010, guid: 05ee3fc4cf79c5046b1a966403c84a38, type: 3}
       propertyPath: m_LocalPosition.x
