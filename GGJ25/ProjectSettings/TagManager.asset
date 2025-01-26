@@ -8,6 +8,7 @@ TagManager:
   - Bubble
   - Clam
   - Wall
+  - Pearl
   layers:
   - Default
   - TransparentFX
