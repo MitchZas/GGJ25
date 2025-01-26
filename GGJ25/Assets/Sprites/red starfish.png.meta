@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      red starfish_0: -7565398883760684680
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
