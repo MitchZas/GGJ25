@@ -22,7 +22,7 @@ public class BubbleMovement : MonoBehaviour
     public TMP_Text swimUpText;
     public TMP_Text swimDownText;
     public TMP_Text arrowText;
-
+    public TMP_Text LeftRightText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -63,6 +63,7 @@ public class BubbleMovement : MonoBehaviour
             swimUpText.enabled = true;
             swimDownText.enabled = false;
             arrowText.enabled = true;
+            LeftRightText.enabled = false;
         }
 
         if (other.gameObject.tag == "Pop")

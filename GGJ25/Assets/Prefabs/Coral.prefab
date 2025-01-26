@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5233419326160553692}
   - component: {fileID: 7793349882872390834}
   m_Layer: 6
-  m_Name: Triangle
+  m_Name: Coral
   m_TagString: Pop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
