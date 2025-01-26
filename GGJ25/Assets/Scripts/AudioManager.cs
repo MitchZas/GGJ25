@@ -1,13 +1,15 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using System;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
     public AudioSource mainTheme;
     public AudioSource whiteNoiseTheme;
-    
+    public AudioSource menuTheme;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -24,8 +26,16 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
-        mainTheme.Play();
-        whiteNoiseTheme.Play();
+        if (SceneManager.GetActiveScene().name == "Main Manu" || (SceneManager.GetActiveScene().name == "Credits"))
+        {
+            menuTheme.Play();
+            whiteNoiseTheme.Play();
+        }
+        else
+        {
+            mainTheme.Play();
+            whiteNoiseTheme.Play();
+        }
     }
 
     public void Play (string name)

@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     public void Credits()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 
     public void QuitGame()

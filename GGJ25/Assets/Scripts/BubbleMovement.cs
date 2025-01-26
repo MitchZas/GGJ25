@@ -29,6 +29,7 @@ public class BubbleMovement : MonoBehaviour
     public TMP_Text LeftRightText;
 
     public AudioSource bubblePopAudio;
+    public AudioSource clamJumpAudio;
 
     public Vector3 startingPosition;
 
@@ -46,6 +47,7 @@ public class BubbleMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            clamJumpAudio.Play();
             rb.linearVelocity = Vector2.down * downStrength;
             rb.gravityScale = -1f;
         }

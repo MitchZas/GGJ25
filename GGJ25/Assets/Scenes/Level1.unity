@@ -1036,6 +1036,7 @@ MonoBehaviour:
     source: {fileID: 0}
   mainTheme: {fileID: 674474028}
   whiteNoiseTheme: {fileID: 1766139452}
+  menuTheme: {fileID: 0}
 --- !u!1 &468378381
 GameObject:
   m_ObjectHideFlags: 0
@@ -4511,6 +4512,7 @@ MonoBehaviour:
   arrowText: {fileID: 0}
   LeftRightText: {fileID: 768623952}
   bubblePopAudio: {fileID: 390980314}
+  clamJumpAudio: {fileID: 1340431300}
   startingPosition: {x: -0.97, y: -0.77, z: 0}
 --- !u!58 &1555428413
 CircleCollider2D:
