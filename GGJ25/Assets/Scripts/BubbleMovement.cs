@@ -28,6 +28,8 @@ public class BubbleMovement : MonoBehaviour
     public TMP_Text arrowText;
     public TMP_Text LeftRightText;
 
+    public AudioSource bubblePopAudio;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -76,6 +78,8 @@ public class BubbleMovement : MonoBehaviour
 
         if (other.gameObject.tag == "Pop")
         {
+            //Object.FindFirstObjectByType<AudioManager>().Play("BubblePop");
+            bubblePopAudio.Play();
             bubbleRenderer.enabled = false;
             StartCoroutine(BubblePop());
         }
@@ -84,6 +88,6 @@ public class BubbleMovement : MonoBehaviour
     IEnumerator BubblePop()
     {
         yield return new WaitForSeconds(.5f);
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

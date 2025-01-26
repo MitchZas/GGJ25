@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class ClamMovement : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class ClamMovement : MonoBehaviour
 
     public BubbleMovement bubbleMovementScript;
     public ClamMovement clamMovementScript;
+
+    public AudioSource clamJumpAudio;
+    public AudioSource clamHitAudio;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +35,8 @@ public class ClamMovement : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            //Object.FindFirstObjectByType<AudioManager>().Play("ClamJump");
+            clamJumpAudio.Play();
             rb.linearVelocity = Vector2.up * upStrength;
         }
 
@@ -52,9 +58,16 @@ public class ClamMovement : MonoBehaviour
         {
             if (other.gameObject.tag == "Pop" && other.gameObject.layer == 6)
             {
-            // Add in a "pop" animation
-                Destroy(gameObject);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                //Object.FindFirstObjectByType<AudioManager>().Play("ClamHit");
+                clamHitAudio.Play();
+                clamSprite.enabled = false;
+                StartCoroutine(ClamPop());
             }
         }
+
+    IEnumerator ClamPop()
+    {
+        yield return new WaitForSeconds(.5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

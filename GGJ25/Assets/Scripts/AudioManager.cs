@@ -5,6 +5,8 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+    public AudioSource mainTheme;
+    public AudioSource whiteNoiseTheme;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -17,6 +19,11 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
         }
+    }
+    private void Start()
+    {
+        mainTheme.Play();
+        whiteNoiseTheme.Play();
     }
 
     public void Play (string name)
