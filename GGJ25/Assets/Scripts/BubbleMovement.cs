@@ -30,6 +30,8 @@ public class BubbleMovement : MonoBehaviour
 
     public AudioSource bubblePopAudio;
 
+    public Vector3 startingPosition;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -71,7 +73,6 @@ public class BubbleMovement : MonoBehaviour
             mergeText.enabled = false;
             swimUpText.enabled = true;
             swimDownText.enabled = false;
-            arrowText.enabled = true;
             LeftRightText.enabled = false;
             pearl.SetActive(true);
         }
@@ -88,6 +89,7 @@ public class BubbleMovement : MonoBehaviour
     IEnumerator BubblePop()
     {
         yield return new WaitForSeconds(.5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        bubbleRenderer.enabled = true;
+        transform.position = startingPosition;
     }
 }
