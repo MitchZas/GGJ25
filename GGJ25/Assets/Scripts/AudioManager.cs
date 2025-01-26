@@ -10,11 +10,13 @@ public class AudioManager : MonoBehaviour
     public AudioSource whiteNoiseTheme;
     public AudioSource menuTheme;
 
+    public static AudioManager instance;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        
+
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();

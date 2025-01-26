@@ -3243,7 +3243,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Shannon Zasa \n\nShannon Zasa & Mitch Zasa\n\nMitch Zasa\n\nGarrison Bouchard-Ferdon"
+  m_text: "Shannon Zasa \n\nShannon Zasa & Mitch Zasa\n\nMitch Zasa\n\nGarrison Bouchard-Ferdon
+    & Vandalorum"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3d8e9068e2dedf429c8f224cea1b815, type: 2}
   m_sharedMaterial: {fileID: 1116754967828115329, guid: a3d8e9068e2dedf429c8f224cea1b815, type: 2}
@@ -3308,7 +3309,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -273.8647, w: -451.9194}
+  m_margin: {x: 0, y: 0, z: -273.8647, w: -503.6886}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
