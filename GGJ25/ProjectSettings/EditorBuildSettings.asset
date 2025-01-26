@@ -13,13 +13,13 @@ EditorBuildSettings:
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/Level2.unity
-    guid: 23eaf7c8133d3bd448b031f924b1a752
+    guid: f83672e4a7b37cc49b59f0bf693cc077
   - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: b275372c31cbbae40acdc39c379c8239
   - enabled: 1
     path: Assets/Scenes/Credits.unity
-    guid: 82db19edb6ac20e41a56e7598c14313d
+    guid: a2a172ae5a15bcf45a41d8d19a0964e9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

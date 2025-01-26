@@ -7,19 +7,21 @@ public class GameManager : MonoBehaviour
     
     public void PlayGame()
     {
-        buttonClickAudio.Play();
         SceneManager.LoadScene("Level1");
     }
 
     public void Credits()
     {
-        buttonClickAudio.Play();
-        SceneManager.LoadScene("Credts");
+        SceneManager.LoadScene(4);
     }
 
     public void QuitGame()
     {
-        buttonClickAudio.Play();
         Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
