@@ -2321,7 +2321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1202300497}
-  upStrength: 6
+  upStrength: 12
   horizontalStrength: 5
   clamSprite: {fileID: 1202300495}
   bubbleMovementScript: {fileID: 1555428412}
@@ -3728,7 +3728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4721686160686032853, guid: 05ee3fc4cf79c5046b1a966403c84a38, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8806669750425780010, guid: 05ee3fc4cf79c5046b1a966403c84a38, type: 3}
       propertyPath: m_LocalPosition.x

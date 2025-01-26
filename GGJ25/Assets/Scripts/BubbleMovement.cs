@@ -30,6 +30,7 @@ public class BubbleMovement : MonoBehaviour
         gameObject.tag = "Player";
         GetComponent<Rigidbody2D>();
         clamMovementScript.enabled = false;
+        rb.gravityScale = 0f;
     }
 
     // Update is called once per frame
@@ -38,6 +39,7 @@ public class BubbleMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.linearVelocity = Vector2.down * downStrength;
+            rb.gravityScale = -1f;
         }
 
         if (Input.GetKeyDown(KeyCode.A))

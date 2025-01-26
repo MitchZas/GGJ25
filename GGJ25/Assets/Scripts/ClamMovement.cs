@@ -38,12 +38,14 @@ public class ClamMovement : MonoBehaviour
         {
             rb.linearVelocity = Vector2.left * horizontalStrength;
             clamSprite.flipX = true;
+            transform.eulerAngles = new UnityEngine.Vector3(0, 0, -26);
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
             rb.linearVelocity = Vector2.right * horizontalStrength;
             clamSprite.flipX = false;
+            transform.eulerAngles = new UnityEngine.Vector3(0, 0, 26);
         }
     }
        private void OnCollisionEnter2D(Collision2D other)
