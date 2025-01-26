@@ -2,6 +2,8 @@ using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.UI;
+using TMPro;
 
 public class BubbleMovement : MonoBehaviour
 {
@@ -16,8 +18,11 @@ public class BubbleMovement : MonoBehaviour
     public CinemachineCamera cam;
     public Transform clamTarget;
 
-    //[SerializeField] AudioSource bubblePopAudio;
-    [SerializeField] AudioClip bubblePop;
+    public TMP_Text mergeText;
+    public TMP_Text swimUpText;
+    public TMP_Text swimDownText;
+    public TMP_Text arrowText;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -54,12 +59,15 @@ public class BubbleMovement : MonoBehaviour
             clamMovementScript.enabled = true;
             bubbleMovementScript.enabled = false;
             cam.Follow = clamTarget;
+            mergeText.enabled = false;
+            swimUpText.enabled = true;
+            swimDownText.enabled = false;
+            arrowText.enabled = true;
         }
 
         if (other.gameObject.tag == "Pop")
         {
             // Add in a "pop" animation
-            AudioSource.PlayClipAtPoint(bubblePop,transform.position);
             Destroy(gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }

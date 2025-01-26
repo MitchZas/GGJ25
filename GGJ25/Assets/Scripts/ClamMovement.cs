@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.UI;
+using TMPro;
 
 public class ClamMovement : MonoBehaviour
 {
@@ -49,7 +51,6 @@ public class ClamMovement : MonoBehaviour
             if (other.gameObject.tag == "Pop" && other.gameObject.layer == 6)
             {
             // Add in a "pop" animation
-                Object.FindFirstObjectByType<AudioManager>().Play("BubblePop");
                 Destroy(gameObject);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
