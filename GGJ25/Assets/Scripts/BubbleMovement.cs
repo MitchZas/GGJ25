@@ -6,12 +6,14 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using static System.TimeZoneInfo;
+using UnityEngine.InputSystem;
 
 public class BubbleMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float downStrength = 5f;
     public float horizontalStrength = 5f;
+    public float speed = 5f;
    
     public ClamMovement clamMovementScript;
     public BubbleMovement bubbleMovementScript;
@@ -52,15 +54,18 @@ public class BubbleMovement : MonoBehaviour
             rb.gravityScale = -1f;
         }
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            rb.linearVelocity = Vector2.left * horizontalStrength;
-        }
+        float horizontalInput = Input.GetAxis("Horizontal");
+        rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
 
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            rb.linearVelocity = Vector2.right * horizontalStrength;
-        }
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    rb.linearVelocity = Vector2.left * horizontalStrength;
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.D))
+        //{
+        //    rb.linearVelocity = Vector2.right * horizontalStrength;
+        //}
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -94,4 +99,9 @@ public class BubbleMovement : MonoBehaviour
         bubbleRenderer.enabled = true;
         transform.position = startingPosition;
     }
+
+    //private void OnMove(InputValue inputValue)
+    //{
+    //    rb.linearVelocity = inputValue.Get<Vector2>() * horizontalStrength;
+    //}
 }
