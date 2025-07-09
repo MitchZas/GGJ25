@@ -14,6 +14,9 @@ public class BubbleMovement : MonoBehaviour
     public float downStrength = 5f;
     public float horizontalStrength = 5f;
     public float speed = 5f;
+
+    [SerializeField] float downwardCooldown = .5f;
+    float cooldownTimer = 0f;
    
     public ClamMovement clamMovementScript;
     public BubbleMovement bubbleMovementScript;
@@ -47,25 +50,19 @@ public class BubbleMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (cooldownTimer > 0)
         {
-            clamJumpAudio.Play();
-            rb.linearVelocity = Vector2.down * downStrength;
-            rb.gravityScale = -1f;
+            cooldownTimer -= Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && cooldownTimer <=0)
+        {
+           DownwardForce();
         }
 
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
 
-        //if (Input.GetKeyDown(KeyCode.A))
-        //{
-        //    rb.linearVelocity = Vector2.left * horizontalStrength;
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.D))
-        //{
-        //    rb.linearVelocity = Vector2.right * horizontalStrength;
-        //}
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -100,8 +97,12 @@ public class BubbleMovement : MonoBehaviour
         transform.position = startingPosition;
     }
 
-    //private void OnMove(InputValue inputValue)
-    //{
-    //    rb.linearVelocity = inputValue.Get<Vector2>() * horizontalStrength;
-    //}
+    void DownwardForce()
+    {
+        clamJumpAudio.Play();
+        rb.linearVelocity = Vector2.down * downStrength;
+        rb.gravityScale = -1f;
+
+        cooldownTimer = downwardCooldown;
+    }
 }
