@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sink_N_Swim_title_0: -4243197349396976315
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

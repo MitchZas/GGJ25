@@ -15,6 +15,8 @@ public class BubbleMovement : MonoBehaviour
     public float horizontalStrength = 5f;
     public float speed = 5f;
 
+    bool canMoveHorizontal;
+
     [SerializeField] float downwardCooldown = .5f;
     float cooldownTimer = 0f;
    
@@ -45,6 +47,7 @@ public class BubbleMovement : MonoBehaviour
         GetComponent<Rigidbody2D>();
         clamMovementScript.enabled = false;
         rb.gravityScale = 0f;
+        canMoveHorizontal = false;
     }
 
     // Update is called once per frame
@@ -58,11 +61,13 @@ public class BubbleMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && cooldownTimer <=0)
         {
            DownwardForce();
+            canMoveHorizontal = true;
         }
-
-        float horizontalInput = Input.GetAxis("Horizontal");
-        rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
-
+           
+        if (canMoveHorizontal)
+        {
+            HorizontalMovement();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -104,5 +109,12 @@ public class BubbleMovement : MonoBehaviour
         rb.gravityScale = -1f;
 
         cooldownTimer = downwardCooldown;
+    }
+
+    void HorizontalMovement()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
+        
     }
 }
